@@ -33,5 +33,5 @@ Output:
 
 For cities containing a space, the exercise constructs an abbreviation from the first letter of each word. For single-word cities, it uses the first three letters and converts them to uppercase.
 
->>> print(cities)
+```python>>> print(cities)
 {'East Coast': ['New York', 'Boston', 'Washington DC'], 'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 'abbrev.': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}

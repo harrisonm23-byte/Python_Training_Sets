@@ -3,7 +3,7 @@ Personally developed and created Python practice exercises covering functions an
 
 ## Example Exercise: City Abbreviations
 
-One of my favorite practice exercises used a dictionary of East Coast and West Coast cities. After adding cities to the dictionary keys "East Coast" and "West Coast", I created a function that updates a new cities["Abbrev."] key with an acronym or abbreviation for each city in cities, with formatting dependent on whether the city name contains a space (i.e., if " " in city). 
+One of my favorite practice exercises used a dictionary of East Coast and West Coast cities. After adding cities to dictionary keys "East Coast" and "West Coast", I created a function that updates a new dictionary key, cities["Abbrev."], with an acronym or abbreviation for each city in cities, with formatting based on whether the city name contains a space (i.e., if " " in city). 
 
 The exercise practices nested iteration, dictionary access, conditionals, string indexing and slicing, `.upper()`, and `.append()`.
 
@@ -34,6 +34,8 @@ Output:
 ```
 
 For cities containing a space, the exercise constructs an abbreviation from the first letter of each word. For single word cities, it instead uses the first three letters and converts them to uppercase.
+
+Updated cities_dict
 
 ```python
 print(cities)

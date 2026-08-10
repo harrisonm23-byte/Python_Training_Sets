@@ -39,4 +39,7 @@ Updated cities dict:
 
 ```python
 print(cities)
-{'East Coast': ['New York', 'Boston', 'Washington DC'], 'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 'abbrev.': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
+
+{'East Coast': ['New York', 'Boston', 'Washington DC'],
+'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 
+'abbrev.': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}

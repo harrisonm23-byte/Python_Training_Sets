@@ -1,7 +1,7 @@
 # Python_Training_Sets
 Personally developed and created Python practice exercises covering functions and small data-oriented problems: data structures, classes, loops, indexing, etc.
 
-## Example Exercise: City Abbreviations
+## Exercise 1: City Abbreviations
 
 One of my favorite practice exercises used a dictionary of East Coast and West Coast cities. After adding cities to dictionary keys "East Coast" and "West Coast", I created a function that updates a new dictionary key, cities["abbrev."], with an acronym or abbreviation for each city in cities, with formatting based on whether the city name contains a space. 
 

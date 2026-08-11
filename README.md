@@ -2,7 +2,7 @@
 Personally developed and created Python practice exercises covering functions and small data-oriented problems: data structures, classes, loops, indexing, etc.
 
 ## Intro / Disclaimer
-I developed these exercises as part of my Python practice process, building them around datasets, rules and functions that I ideated independently. To be clear, I used AI assistants as tutors and code reviewers to aid in my learning. I would write the code myself, share my attempted solutions, and ask for feedback on errors, syntax, and alternative approaches. I then repeatedly re-wrote and re-ran the exercises in my terminal to reinforce the underlying concepts, develop procedural memory, and build fluency.
+I developed these exercises as part of my Python practice process, building them around datasets, rules and functions that I ideated independently. To be clear, I used AI assistants as tutors and code reviewers to aid in my learning. I would write the code myself, share my attempted output, and ask for feedback on errors, syntax, and alternative approaches. I then repeatedly re-wrote and re-ran the exercises in my terminal to reinforce the underlying concepts, develop procedural memory, and build fluency.
 
 ## _______________________________
 

@@ -295,12 +295,12 @@ Replacement logic:
     To replace a letter: Add the _product_ of the ID’s numeric values to the target letter by mapping its alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
     
     To replace a number: Sum the digits of the product of the ID's numeric values, and add this number to an existing replacement candidate. 
+
+Calculate the replacement values using the sum of the digits in the existing ID and the index of the character being replaced. Numeric results are mapped to either letters A–Z or digits 0–9 depending on the type of the existing character.
+Characters changed during the immediately preceding generation are kept in the next generation, and the resulting ID is checked against all previous IDs before being assigned to the holder.
+
     
 ```python
-
-"""Calculate the replacement values using the sum of the digits in the existing ID and the index of the character being replaced. Numeric results are mapped to either letters A–Z or digits 0–9 depending on the type of the existing character.
-    
-Characters changed during the immediately preceding generation are kept in the next generation, and the resulting ID is checked against all previous IDs before being assigned to the holder."""
 
 def assign_new_id(members, holder):
     member = members[holder]

@@ -85,11 +85,9 @@ def sun_times(day, anchors):
     Example: 
     6:30 AM: hm(6, 30) = 360, 6:15 PM: hm(18, 15) = 1095
     """
+    
+# Determine which pair of anchor dates surrounds the target date in order to obtain a date index.
 
-```
-Determine which pair of anchor dates surrounds the target date in order to obtain a date index.
-
-```python
     month = day.month
     
     d = day.day
@@ -125,9 +123,9 @@ Determine which pair of anchor dates surrounds the target date in order to obtai
     last_sunrise, last_sunset = anchors[last_anchor]
     next_sunrise, next_sunset = anchors[next_anchor]
 ```
-Apply a linear smoothing factor of 1/90 to the date index, and multiply it by the difference between next and last anchor sunrise/sunset.
+Apply a linear smoothing factor of ~1/90 to the date index, and multiply it by the difference between next and last anchor sunrise/sunset.
 
-```python
+```python    
     sunrise = (
         last_sunrise
         + day_index * (1 / 90)
@@ -141,6 +139,9 @@ Apply a linear smoothing factor of 1/90 to the date index, and multiply it by th
     )
 
     return sunrise, sunset
+
+# alternatively, define span = (date(day.year, *next_anchor) - date(day.year, *last_anchor)).days
+
 ```
 
 Example: 
@@ -148,9 +149,9 @@ Example:
 ```python
 anchors = {
     spring:  (hm(6, 0), hm(18, 0)),   # 6:00 AM, 6:00 PM
-    summer:  (hm(5, 0), hm(15, 30)),   # 5:00 AM, 8:30 PM
-    fall:  (hm(6, 0), hm(16, 0)),   # 6:00 AM, 6:00 PM
-    winter: (hm(7, 0), hm(4, 40)),    # 7:00 AM, 4:40 PM
+    summer:  (hm(5, 0), hm(20, 30)),   # 5:00 AM, 8:30 PM
+    fall:  (hm(6, 0), hm(18, 0)),   # 6:00 AM, 6:00 PM
+    winter: (hm(7, 0), hm(16, 40)),    # 7:00 AM, 4:40 PM
 }
 
 sunrise, sunset = sun_times(

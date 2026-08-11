@@ -1,13 +1,13 @@
 # Python_Training_Sets
 Personally developed and created Python practice exercises covering functions and small data-oriented problems: data structures, classes, loops, indexing, etc.
 
-## ____________________________________________________
+## _______________________________
 
 ## Exercise 1: City Abbreviations
 
-Based on a dictionary of East Coast and West Coast cities, I abbreviate or acronymize the city names based on whether they contain one word or two. 
+Based on a dictionary of East Coast and West Coast cities, I abbreviate or 'acronymize' the city names based on whether they contain one word or two. 
 
-I start by adding a list of cities to dictionary keys "East Coast" and "West Coast". I then create a function that updates a new dictionary key, cities["abbrev."], with either an acronym or abbreviation for each city in the cities dictionary, with formatting based on whether the city name contains a space.
+Start by adding a list of cities to dictionary keys "East Coast" and "West Coast", then create a function that updates a new dictionary key, cities["abbrev."], with either an acronym or abbreviation for each city in the cities dictionary, with formatting based on whether the city name contains a space.
 
 For those with a space, capitalize and combine the first letter of each word. For those cities with a one word name, capitalize only the first three letters, and abbreviate the name using just this string. 
 
@@ -51,7 +51,7 @@ print(cities)
 'abbrev.': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
 ```
 
-## ____________________________________________________
+## __________________________________________
 
 ## Exercise 2: Sunrise and Sunset Calculator
 
@@ -115,7 +115,7 @@ Next, determine which pair of anchor dates surrounds the target date in order to
     last_sunrise, last_sunset = anchors[last_anchor]
     next_sunrise, next_sunset = anchors[next_anchor]
 ```
-Last, apply a linear 1/90 smoothing factor to the date index, multiplied by the difference between next and last anchor sunrise & sunset.
+Last, apply a linear smoothing factor of 1/90 to the date index, then multiply it by the difference between the next and previous anchor sunrise and sunset times.
 
 ```python
     sunrise = (
@@ -153,3 +153,23 @@ print(sunset)
 ```
 
 ## ____________________________________________________
+
+## Mom's Family
+
+I frequently practiced Python during a stay in New York where I spent time with my maternal relatives. I frequently practiced using family tree data. 
+
+```python
+Mom_Side = {
+    "Family": {
+        "Uncle": "Jay",
+        "Aunt": "Sue",
+        "Cousin"; "Steven",
+        "First Cousins"; ["Kyle", "Shannon"],
+        "Great Uncle"; "Arnold"
+    },
+    "Pets": {
+        "Dogs": ["Parker", "Collie", "Wilson"],
+        "Cats": "Mouse"
+        }
+    }
+}

@@ -159,8 +159,7 @@ anchors = {
 
 sunrise, sunset = sun_times(
     date(2026, 5, 5),
-    anchors
-)
+    anchors)
 
 print(sunrise)
 print(sunset)
@@ -170,11 +169,9 @@ print(sunset)
 
 ## Exercise 3: Family Vacation
 
-I frequently practiced Python during a visit to New York for a maternal family event. A common topic of family gatherings surrounds the boarding of everyone's pets. Some relatives accept pets and other don't. 
+I often practiced Python during a visit to New York for a maternal family event. A common topic at family gatherings surrounds the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pets can tag along, and whose have to be boarded. The exercise tests Boolean logic, dictionaries, nested data structures, and loops.
 
-Accordingly, this exercise determines whose pets comes along or have to be boarded, depending on who is visiting who. This exercise tests Boolean logic, dictionaries, nested data structures, and loops.
-
-Disclaimer: Admittedly, this exervise is largely fictitious – no one ever brings their cat. 
+Note: Admittedly, this exercise is largely fictitious – no one ever brings their cat. 
 
 ```python
 people = {
@@ -260,10 +257,11 @@ Example:
 
 for pet, (boards, why) in boarding(
     pets, visits, households, people
-).items():
+    ).items():
     print(pet, boards, why)
 ```
 Result: 
+
 ```python
 Parker Comes since Mom is visiting Jay_and_Sue, who welcomes dogs
 Mouse Boarded since Mom is visiting Jay_and_Sue, who cannot have cats

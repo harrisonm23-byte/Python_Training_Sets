@@ -380,10 +380,8 @@ print(f"Generated New ID: {new_id}")
 print("Updated Member Data:")
 print(members[holder])
 
-Generated New ID: ABC212345
+Generated New ID: STCD12345
 Updated Member Data:
-{
-    'current_id': 'ABC212345',
-    'id_history': ['ABCD12345', 'ABC212345'],
-    'last_changed': [3, 4]
-}
+{'current_id': 'STCD12345',
+ 'id_history': ['ABCD12345', 'STCD12345'],
+ 'last_changed': [0, 1]}

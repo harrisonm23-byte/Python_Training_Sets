@@ -166,9 +166,9 @@ print(sunset)
 
 ## Exercise 3: Family Vacation
 
-I frequently practiced Python during a visit to New York for a maternal family event. A common topic of family gatherings surrounds the boarding of everyone's pets. Some relatives accept pets and other don't. Accordingly, this exercise determines whose pets comes along or have to be boarded, depending on who is visiting who.
+I frequently practiced Python during a visit to New York for a maternal family event. A common topic of family gatherings surrounds the boarding of everyone's pets. Some relatives accept pets and other don't. 
 
-This exercise tests Boolean logic, dictionaries, nested data structures, and loops.
+Accordingly, this exercise determines whose pets comes along or have to be boarded, depending on who is visiting who. This exercise tests Boolean logic, dictionaries, nested data structures, and loops.
 
 Disclaimer: Admittedly, this exervise is largely fictitious – no one ever brings their cat. 
 
@@ -234,19 +234,17 @@ def boarding(pets, visits, households, people):
         if kind in house_rules(house, households, people):
             result[pet] = (
                 "Boarded",
-                f"since {owner} is visiting {house}, who cannot have {kind}s"
-            )
+                f"since {owner} is visiting {house}, who cannot have {kind}s")
 
         elif households[house]["accepts_pets"]:
             result[pet] = (
                 "Comes",
-                f"since {owner} is visiting {house}, which welcomes {kinds}s")
+                f"since {owner} is visiting {house}, who welcomes {kind}s")
 
         else:
             result[pet] = (
                 "Boarded",
-                f"since {owner} is visiting {house}, who does not take {kind}s"
-                )
+                f"since {owner} is visiting {house}, who does not take {kind}s")
                 
     return result
 ```

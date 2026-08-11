@@ -164,7 +164,7 @@ print(sunset)
 
 ## ____________________________________________________
 
-## Family Vacation
+## Exercise 3: Family Vacation
 
 I frequently practiced Python during a visit to New York for a maternal family event. A common topic of family gatherings surrounds the boarding of everyone's pets. Some relatives accept pets and other don't. Accordingly, this exercise determines whose pets comes along or have to be boarded, depending on who is visiting who.
 

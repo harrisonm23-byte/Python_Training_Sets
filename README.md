@@ -42,9 +42,6 @@ Output:
 ```python
 ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']
 ```
-
-For cities containing a space, the exercise constructs an abbreviation from the first letter of each word. For single word cities, it instead uses the first three letters and converts them to uppercase.
-
 Updated cities dict:
 
 ```python

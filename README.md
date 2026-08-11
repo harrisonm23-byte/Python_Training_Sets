@@ -2,18 +2,20 @@
 Personally developed and created Python practice exercises covering functions and small data-oriented problems: data structures, classes, loops, indexing, etc.
 
 ## Intro / Disclaimer
-I developed these exercises as part of my Python practice process, building them around datasets, rules and functions that I designed independently. For my own pedagogical process, I used AI assistants as tutors and code reviewers. I'd write the code myself, share my attempted solution and terminal output, and recieve AI-instructed feedback on errors, syntax, and alternative approaches. I then repeatedly re-wrote and re-ran the exercises to practice the underlying concepts, build procedural muscle memory, and develop fluency.
+I developed these exercises as part of my Python practice process, built around datasets, rules and functions I designed independently. For my own pedagogical process, I used AI assistants as tutors and code reviewers. I'd write the code myself, share my attempted solutions and terminal output, and receive AI-instructed feedback on errors, syntax, and alternative approaches. I'd then repeatedly re-write and re-run the exercises in my terminal in order to practice the underlying concepts, build procedural muscle memory, and develop Python fluency.
 
 ## _______________________________
 
 ## Exercise 1: City Abbreviations
     cities["abbrev"]
 
-Based on a dictionary of East Coast and West Coast cities, I abbreviate or 'acronymize' the city names based on whether they contain one word or two. Start with a dictionary of cities across the West Coast and East coast, and create a function that updates a new key, cities["abbrev"], with  an acronym or abbreviation for each city based on whether the city name contains a space.
+Based on a dictionary of East Coast and West Coast cities, I'll abbreviate or 'acronymize' the cities' names based on whether they contain one word or two words. I start with a dictionary of cities across the west coast and east coast, and then create a function that updates a new key, cities["abbrev"], with an acronym or abbreviation for each city.
 
-For those with a space, capitalize the first letter of each word and combine them to make an acronym. For one word city names, capitalize and return only the first three letters. 
+For city names that contain a space, I capitalize the first letter of each word, and combine the letters to make an acronym. For one-word city names, I capitalize and return only the first three letters. 
 
 The exercise practices nested iteration, dictionary access, conditionals, string indexing and slicing, `.upper()`, and `.append()`.
+
+Note: This version of the function only uses the first two words of a city's name. For example, New York City becomes --> 'NY', not 'NYC'.
 
 ```python
 cities = {

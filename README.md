@@ -74,6 +74,7 @@ def sun_times(day, anchors):
         (12, 21): (sunrise_minutes, sunset_minutes),
     }
 
+    """
     Times are minutes after midnight.
     Example: 6:30 AM = 390, 6:15 PM = 1095
     """

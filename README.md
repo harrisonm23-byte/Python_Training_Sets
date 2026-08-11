@@ -292,9 +292,9 @@ Replacement logic:
     
 2. For the remaining positions:
     
-    To replace a _letter_: Add the _product_ of the ID’s numeric values to the target letter by mapping its alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
+    To replace a letter: Add the _product_ of the ID’s numeric values to the target letter by mapping its alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
     
-    To replace a _number_: Sum the digits of the product of the ID's numeric values, and add this number to an existing replacement candidate. 
+    To replace a number: Sum the digits of the product of the ID's numeric values, and add this number to an existing replacement candidate. 
     
 ```python
 
@@ -356,3 +356,34 @@ Example:
 
 
 ```python
+# Sample members dataset
+members = {
+    101: {
+        "current_id": "ABCD12345",
+        "id_history": ["ABCD12345"],
+        "last_changed": []  
+    },
+    102: {
+        "current_id": "XYZW67890",
+        "id_history": ["XYZW67890"],
+        "last_changed": []
+    }
+}
+
+# Run function for member 101
+holder = 101
+new_id = assign_new_id(members, holder)
+```
+Output results:
+```python
+print(f"Generated New ID: {new_id}")
+print("Updated Member Data:")
+print(members[holder])
+
+Generated New ID: ABC212345
+Updated Member Data:
+{
+    'current_id': 'ABC212345',
+    'id_history': ['ABCD12345', 'ABC212345'],
+    'last_changed': [3, 4]
+}

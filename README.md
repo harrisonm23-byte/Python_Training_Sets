@@ -199,7 +199,7 @@ pets = {
     "Collie": {"kind": "dog", "owner": "Shannon"},
 }
 ```
-Now define households, household_avoids, and boarding, and format the results: 
+Now define households, house rules, and boarding, and format the results: 
 
 ```python 
 def household_of(person, households):
@@ -209,7 +209,7 @@ def household_of(person, households):
     return None
 
 
-def house_avoids(house, households, people):
+def house_rules(house, households, people):
     avoided = []
 
     for resident in households[house]["residents"]:
@@ -231,7 +231,7 @@ def boarding(pets, visits, households, people):
 
         house = household_of(visits[owner], households)
 
-        if kind in house_avoids(house, households, people):
+        if kind in house_rules(house, households, people):
             result[pet] = (
                 "Boarded",
                 f"since {owner} is visiting {house}, who cannot have {kind}s"

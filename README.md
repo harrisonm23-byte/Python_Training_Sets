@@ -1,6 +1,9 @@
 # Python_Training_Sets
 Personally developed and created Python practice exercises covering functions and small data-oriented problems: data structures, classes, loops, indexing, etc.
 
+## Intro / AI-Assistance Disclaimer
+I developed these exercises as part of my Python practice, building them around datasets and rules that I ideated independently. Unlike in an exam setting, I used AI tools as a tutor and code reviewer. I would write the code myself, share my attempted solutions and terminal output, and ask for feedback on errors, syntax, and alternative approaches. I then repeatedly re-wrote and re-ran the exercises in my terminal to reinforce the underlying concepts, build fluency, and develop procedural memory.
+
 ## _______________________________
 
 ## Exercise 1: City Abbreviations
@@ -268,4 +271,90 @@ Corgy Stays since Steven is not traveling
 Wilson Stays since Jay is not traveling
 Collie Stays since Shannon is not traveling
 ```
+
+## Exercise 4: ID Replacement Generator
+
+In this exercise, I practiced nested dictionaries, indexing, loops, string manipulation, arithmetic, and functions. 
+
+This exercise creates a system for generating and tracking ID numbers. Each policyholder is represented by a numbered key in a dictionary containing the card holder's current ID, prior IDs, and the characters changed in the most recent generation.
+
+Each ID contains 9 characters: 4 letters and 5 digits. When a new ID is generated, 2 characters are replaced according to a set of indexing and arithmetic rules. 
+
+Rules:
+
+    - Each ID must contain exactly 9 characters.
+    - Each ID must contain exactly 4 letters and 5 digits.
+    - Exactly 2 characters must be replaced per generation.
+    - The characters replaced in the previous generation are preserved.
+    - No previously used ID may be returned.
+
+Replacement logic: 
+
+1. If a number or letter was replaced in the previous ID generation, preserve that character.
     
+2. For the remaining positions:
+    
+    To replace a _letter_: Add the _product_ of the ID’s numeric values to the target letter by mapping its alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
+    
+    To replace a _number_: Sum the digits of the product of the ID's numeric values, and add this number to an existing replacement candidate. 
+    
+```python
+
+"""Calculate the replacement values using the sum of the digits in the existing ID and the index of the character being replaced. Numeric results are mapped to either letters A–Z or digits 0–9 depending on the type of the existing character.
+    
+Characters changed during the immediately preceding generation are kept in the next generation, and the resulting ID is checked against all previous IDs before being assigned to the holder."""
+
+def assign_new_id(members, holder):
+    member = members[holder]
+    current = member["current_id"]
+
+    used = {
+        id_
+        for m in members.values()
+        for id_ in m["id_history"]
+    }
+
+    available = [
+        i for i in range(len(current))
+        if i not in member["last_changed"]
+    ]
+
+    seed = 1
+    for c in current:
+        if c.isdigit():
+            seed *= int(c) + 1
+
+    while True:
+        first = available[seed % len(available)]
+        rest = [i for i in available if i != first]
+        second = rest[seed % len(rest)]
+        new = list(current)
+
+        for i in (first, second):
+            if current[i].isalpha():
+                new[i] = chr(65 + (seed + i) % 26)
+                if new[i] == current[i]:
+                    new[i] = chr(65 + (seed + i + 1) % 26)
+            else:
+                new[i] = str((seed + i) % 10)
+                if new[i] == current[i]:
+                    new[i] = str((seed + i + 1) % 10)
+
+        new = "".join(new)
+
+        if new not in used:
+            break
+
+        seed += 1
+
+    member["current_id"] = new
+    member["id_history"].append(new)
+    member["last_changed"] = [first, second]
+
+    return new
+```
+
+Example: 
+
+
+```python

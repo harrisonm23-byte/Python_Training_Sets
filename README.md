@@ -169,7 +169,7 @@ print(sunset)
 
 ## Exercise 3: Family Vacation
 
-I often practiced Python during a visit to New York for a family event. A common topic at family gatherings surrounds the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pets can tag along, and whose have to be boarded. The exercise tests Boolean logic, dictionaries, nested data structures, and loops.
+I often practiced Python during a visit to New York for a maternal family event. A common topic at family gatherings surrounds the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pets can tag along, and whose have to be boarded. The exercise tests Boolean logic, dictionaries, nested data structures, and loops.
 
 Note: Admittedly, this exercise is largely fictitious – no one ever brings their cat. 
 

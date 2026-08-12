@@ -9,13 +9,11 @@ I developed these exercises as part of my Python practice process, built around 
 ## Exercise 1: City Abbreviations
     cities["abbrev"]
 
-Based on a dictionary of East Coast and West Coast cities, I'll abbreviate or 'acronymize' the cities' names based on whether they contain one word or two words. I start with a dictionary of cities across the west coast and east coast, and then create a function that updates a new key, cities["abbrev"], with an acronym or abbreviation for each city.
+Based on a dictionary of East Coast and West Coast cities, I abbreviate or 'acronymize' the cities' names based on whether they contain one word or two words. I start with a dictionary of cities across the west coast and east coast, and then create a function that updates a new key, cities["abbrev"], with an acronym or abbreviation for each city.
 
-For city names that contain a space, I capitalize the first letter of each word, and combine the letters to make an acronym. For one-word city names, I capitalize and return only the first three letters. 
+For cities containing a space, the exercise constructs an abbreviation from only the first letter of each word. For single-word cities, it uses the first three letters and converts them to uppercase. 
 
 The exercise practices nested iteration, dictionary access, conditionals, string indexing and slicing, `.upper()`, and `.append()`.
-
-Note: This version of the function only uses the first two words of a city's name. For example, New York City becomes --> 'NY', not 'NYC'.
 
 ```python
 cities = {
@@ -51,6 +49,7 @@ print(cities)
 'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 
 'abbrev': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
 ```
+Note: This version of the function only uses the first two words of a city's name for cities with multiple words. For example, New York City becomes --> 'NY', not 'NYC'.
 
 ## __________________________________________
 

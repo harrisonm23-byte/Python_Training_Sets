@@ -11,7 +11,7 @@ I developed these exercises as part of my Python practice process, built around 
 
 Based on a dictionary of East Coast and West Coast cities, I abbreviate or 'acronymize' the cities' names based on whether they contain one word or two words. I start with a dictionary of cities across the west coast and east coast, and then create a function that updates a new key, cities["abbrev"], with an acronym or abbreviation for each city.
 
-For cities containing a space, the function returns an acronym using the first letter of each word. For single-word cities, it uses the first three letters and converts them to uppercase. Note: This version of the function only uses the first two words of a city's name for any city with multiple words. For example, New York City becomes --> 'NY', not 'NYC'.
+For cities containing a space, the function returns an acronym using the first letter of each word. For single-word cities, it instead uses the first three letters and converts them to uppercase. 
 
 The exercise practices nested iteration, dictionary access, conditionals, string indexing and slicing, `.upper()`, and `.append()`.
 
@@ -49,17 +49,15 @@ print(cities)
 'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 
 'abbrev': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
 ```
-
+Note: This version only uses the first two words of a city name with multiple words. For example, New York City becomes --> 'NY', not 'NYC'. For that, we would use .split().
 ## __________________________________________
 
 ## Exercise 2: Sunrise and Sunset Calculator: 
     sun_times(day, anchors)
 
-For a given a date, find the sunrise and sunset based on provided equinox and solstice sunrise/sunset timing ("anchor dates"). 
+The following function estimates sunrise and sunset timing for any date in the calendar year. For a given date, it approximates the sunrise and sunset timing by calculating the dates relative position between four anchor points, which represent the equinoxes and solstices (i.e., "anchor dates"). 
 
-Goal: Write a a function that approximate sunrise/sunset times based on anchor data, and estimates the sunrise and sunset for any date in the calendar year.
-
-The function approximates the equinoxes and solstice dates as March 21, June 21, September 21, and December 21, ignoring annual variations in seasonal timing. 
+The function further approximates the equinoxes and solstices as March 21, June 21, September 21, and December 21, ignoring annual variations in seasonal timing. 
 
 ```python
 from datetime import date

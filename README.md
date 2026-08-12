@@ -55,7 +55,7 @@ Note: This version only uses the first two words of a city name with multiple wo
 ## Exercise 2: Sunrise and Sunset Calculator: 
     sun_times(day, anchors)
 
-The following function estimates sunrise and sunset timing for any date in the calendar year. For a given date, it approximates the sunrise and sunset timing by calculating the dates relative position between four anchor points, which represent the equinoxes and solstices (i.e., "anchor dates"). 
+The following function estimates sunrise and sunset timing for any date in the calendar year. For a given date, it approximates the time of sunrise and sunset by calculating the date's relative position between two of four anchor points, which individualy represent an equinox or solstice (i.e., "anchor dates"). 
 
 The function further approximates the equinoxes and solstices as March 21, June 21, September 21, and December 21, ignoring annual variations in seasonal timing. 
 
@@ -121,7 +121,7 @@ def sun_times(day, anchors):
     last_sunrise, last_sunset = anchors[last_anchor]
     next_sunrise, next_sunset = anchors[next_anchor]
 ```
-Apply a linear smoothing factor of ~1/90 to the date index, and multiply it by the difference between next and last anchor sunrise/sunset.
+Apply a linear factor of ~1/90 to the date index, and multiply it by the difference between the next and last anchor date sunrise/sunset.
 
 ```python    
     sunrise = (
@@ -138,7 +138,7 @@ Apply a linear smoothing factor of ~1/90 to the date index, and multiply it by t
 
     return sunrise, sunset
 
-# alternatively, define span = (date(day.year, *next_anchor) - date(day.year, *last_anchor)).days
+# alternatively, we can also define span = (date(day.year, *next_anchor) - date(day.year, *last_anchor)).days
 
 ```
 
@@ -164,9 +164,9 @@ print(sunset)
 
 ## Exercise 3: Family Vacation
 
-I often practiced Python during a visit to New York for a maternal family event. A common topic at family gatherings surrounds the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pets can tag along, and whose have to be boarded. The exercise tests Boolean logic, dictionaries, nested data structures, and loops.
+I often practiced Python during a visit to New York for a maternal family event. A common topic at such gatherings concerns the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pet can tag along, and whose have to be boarded. The exercise practices Boolean logic, dictionaries, nested data structures, and loops.
 
-Note: Admittedly, this exercise is largely fictitious – no one ever brings their cat. 
+Note: Admittedly, the logic in this exercise is largely fictitious – no one ever brings their cat. 
 
 ```python
 people = {

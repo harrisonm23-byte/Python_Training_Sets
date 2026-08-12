@@ -11,7 +11,7 @@ I developed these exercises as part of my Python practice process, built around 
 
 Based on a dictionary of East Coast and West Coast cities, I abbreviate or 'acronymize' the cities' names based on whether they contain one word or two words. I start with a dictionary of cities across the west coast and east coast, and then create a function that updates a new key, cities["abbrev"], with an acronym or abbreviation for each city.
 
-For cities containing a space, the exercise constructs an abbreviation from only the first letter of each word. For single-word cities, it uses the first three letters and converts them to uppercase. 
+For cities containing a space, the function returns an acronym using the first letter of each word. For single-word cities, it uses the first three letters and converts them to uppercase. Note: This version of the function only uses the first two words of a city's name for any city with multiple words. For example, New York City becomes --> 'NY', not 'NYC'.
 
 The exercise practices nested iteration, dictionary access, conditionals, string indexing and slicing, `.upper()`, and `.append()`.
 
@@ -49,7 +49,6 @@ print(cities)
 'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 
 'abbrev': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
 ```
-Note: This version of the function only uses the first two words of a city's name for cities with multiple words. For example, New York City becomes --> 'NY', not 'NYC'.
 
 ## __________________________________________
 

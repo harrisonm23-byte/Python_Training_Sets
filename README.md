@@ -360,9 +360,7 @@ members = {
 # Run function for member 101
 holder = 101
 new_id = assign_new_id(members, holder)
-```
-Output results:
-```python
+
 print(f"Generated New ID: {new_id}")
 print("Updated Member Data:")
 print(members[holder])

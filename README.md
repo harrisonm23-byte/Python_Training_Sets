@@ -352,14 +352,9 @@ Example:
 members = {
     101: {
         "current_id": "ABCD12345",
-        "id_history": ["ABCD12345"],
+        "id_history": ["ABCD12345"],["ABGH12345"]
         "last_changed": []  
     },
-    102: {
-        "current_id": "XYZW67890",
-        "id_history": ["XYZW67890"],
-        "last_changed": []
-    }
 }
 
 # Run function for member 101
@@ -377,3 +372,8 @@ Updated Member Data:
 {'current_id': 'STCD12345',
  'id_history': ['ABCD12345', 'STCD12345'],
  'last_changed': [0, 1]}
+
+# The function changes ABCD12345 to STCD12345, replacing A with S and B with T.
+```
+
+## Thanks for reading!

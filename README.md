@@ -365,6 +365,8 @@ print(f"Generated New ID: {new_id}")
 print("Updated Member Data:")
 print(members[holder])
 
+#Output
+
 Generated New ID: STCD12345
 Updated Member Data:
 {'current_id': 'STCD12345',

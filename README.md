@@ -265,7 +265,7 @@ Wilson Stays since Jay is not traveling
 Collie Stays since Shannon is not traveling
 ```
 
-## Exercise 4: ID Replacement Generator
+## Exercise 4: ID Code Generator
 
 In this exercise, I practiced nested dictionaries, indexing, loops, string manipulation, arithmetic, and functions. 
 

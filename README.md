@@ -287,9 +287,10 @@ Replacement logic:
     
 2. For the remaining positions:
     
-    To replace a letter: Add the _product_ of the ID’s numeric values to the target letter by mapping its alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
+    If letter: Map the letter's alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
+        Add the _product_ of the ID’s numeric values to the target letter by mapping
     
-    To replace a number: Sum the digits of the product of the ID's numeric values, and add this number to an existing replacement candidate. 
+    If number: Sum the digits of the product of the ID's numeric values, and add this number to the target digit. 
 
     
 ```python

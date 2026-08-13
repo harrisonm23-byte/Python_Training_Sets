@@ -162,110 +162,7 @@ print(sunset)
 
 ## ____________________________________________________
 
-## Exercise 3: Family Vacation & Pet Boarding 
-
-I often practiced Python during a visit to New York for a maternal family event. A common topic at such gatherings concerns the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pet can tag along, and whose have to be boarded. The exercise practices Boolean logic, dictionaries, nested data structures, and loops.
-
-Note: Admittedly, the logic in this exercise is largely fictitious – no one ever brings their cat. 
-
-```python
-people = {
-    "Mom":     {"rules": []},
-    "Jay":     {"rules": []},
-    "Sue":     {"rules": ["cat"]},
-    "Steven":  {"rules": []},
-    "Kyle":    {"rules": []},
-    "Shannon": {"rules": []},
-    "Arnold":  {"rules": ["dog"]},
-}
-
-households = {
-    "Mom":          {"residents": ["Mom"],             "accepts_pets": True},
-    "Jay_and_Sue":  {"residents": ["Jay", "Sue"],      "accepts_pets": True},
-    "Steven":       {"residents": ["Steven"],          "accepts_pets": True},
-    "Kyle_Shannon": {"residents": ["Kyle", "Shannon"], "accepts_pets": False},
-    "Arnold":       {"residents": ["Arnold"],          "accepts_pets": True},
-}
-
-pets = {
-    "Parker": {"kind": "dog", "owner": "Mom"},
-    "Mouse":  {"kind": "cat", "owner": "Mom"},
-    "Corgy":  {"kind": "dog", "owner": "Steven"},
-    "Wilson": {"kind": "dog", "owner": "Jay"},
-    "Collie": {"kind": "dog", "owner": "Shannon"},
-}
-```
-Now define households, house rules, and boarding, and format the results: 
-
-```python 
-def household_of(person, households):
-    for house, info in households.items():
-        if person in info["residents"]:
-            return house
-    return None
-
-
-def house_rules(house, households, people):
-    avoided = []
-
-    for resident in households[house]["residents"]:
-        avoided.extend(people[resident]["rules"])
-
-    return avoided
-
-
-def boarding(pets, visits, households, people):
-    result = {}
-
-    for pet, info in pets.items():
-        owner = info["owner"]
-        kind = info["kind"]
-
-        if owner not in visits:
-            result[pet] = ("Stays", f"since {owner} is not traveling")
-            continue
-
-        house = household_of(visits[owner], households)
-
-        if kind in house_rules(house, households, people):
-            result[pet] = (
-                "Boarded",
-                f"since {owner} is visiting {house}, who cannot have {kind}s")
-
-        elif households[house]["accepts_pets"]:
-            result[pet] = (
-                "Comes",
-                f"since {owner} is visiting {house}, who welcomes {kind}s")
-
-        else:
-            result[pet] = (
-                "Boarded",
-                f"since {owner} is visiting {house}, who does not take {kind}s")
-                
-    return result
-```
-Example: 
-    Mom visiting Aunt Sue
-    
-```python
-  visits = {"Mom": "Sue"}
-
-for pet, (boards, why) in boarding(
-    pets, visits, households, people
-    ).items():
-    print(pet, boards, why)
-```
-Result: 
-
-```python
-Parker Comes since Mom is visiting Jay_and_Sue, who welcomes dogs
-Mouse Boarded since Mom is visiting Jay_and_Sue, who cannot have cats
-Corgy Stays since Steven is not traveling
-Wilson Stays since Jay is not traveling
-Collie Stays since Shannon is not traveling
-```
-
-## Exercise 4: ID Code Generator
+## Exercise 3: ID Code Generator
 
 This exercise creates a system for generating  ID numbers, each containing 4 letters and 5 digits. 
 
@@ -286,12 +183,10 @@ Replacement logic:
 1. If a number or letter was replaced in the previous ID generation, preserve that character.
     
 2. For the remaining positions:
-    
-    If letter: Map the letter's alphabetical position (A-Z) to a corresponding numerical value between 1-26. 
-        Add the _product_ of the ID’s numeric values to the target letter by mapping
-    
-    If number: Sum the digits of the product of the ID's numeric values, and add this number to the target digit. 
 
+   - If a number: Sum the digits of the product of the ID's numeric values, and add this number to the target digit.
+   - If a letter: Map the letter's position (A-Z) to a corresponding numerical value between 1-26.
+       - Add the product of the ID’s numeric values to the target letter, and re-assign to a new letter. If 
     
 ```python
 
@@ -375,6 +270,108 @@ Updated Member Data:
  'last_changed': [0, 1]}
 
 # The function changes ABCD12345 to STCD12345, replacing A with S and B with T.
+```
+## ____________________________________________________
+
+## Exercise 4: Family Vacation & Pet Boarding 
+
+I often practiced Python during a visit to New York for a maternal family event. A common topic at such gatherings concerns the boarding of everyone's pets, since some relatives accept pets and other don't. Accordingly, this exercise determines whose pet can tag along, and whose have to be boarded. The exercise practices Boolean logic, dictionaries, nested data structures, and loops.
+
+Note: Admittedly, the logic in this exercise is largely fictitious – no one ever brings their cat. 
+
+```python
+people = {
+    "Mom":     {"rules": []},
+    "Jay":     {"rules": []},
+    "Sue":     {"rules": ["cat"]},
+    "Steven":  {"rules": []},
+    "Kyle":    {"rules": []},
+    "Shannon": {"rules": []},
+    "Arnold":  {"rules": ["dog"]},
+}
+
+households = {
+    "Mom":          {"residents": ["Mom"],             "accepts_pets": True},
+    "Jay_and_Sue":  {"residents": ["Jay", "Sue"],      "accepts_pets": True},
+    "Steven":       {"residents": ["Steven"],          "accepts_pets": True},
+    "Kyle_Shannon": {"residents": ["Kyle", "Shannon"], "accepts_pets": False},
+    "Arnold":       {"residents": ["Arnold"],          "accepts_pets": True},
+}
+
+pets = {
+    "Parker": {"kind": "dog", "owner": "Mom"},
+    "Mouse":  {"kind": "cat", "owner": "Mom"},
+    "Corgy":  {"kind": "dog", "owner": "Steven"},
+    "Wilson": {"kind": "dog", "owner": "Jay"},
+    "Collie": {"kind": "dog", "owner": "Shannon"},
+}
+```
+Now define households, house rules, and boarding, and format the results: 
+
+```python 
+def household_of(person, households):
+    for house, info in households.items():
+        if person in info["residents"]:
+            return house
+    return None
+
+
+def house_rules(house, households, people):
+    rule_against = []
+
+    for resident in households[house]["residents"]:
+        rule_against.extend(people[resident]["rules"])
+
+    return rule_against
+
+
+def boarding(pets, visits, households, people):
+    result = {}
+
+    for pet, info in pets.items():
+        owner = info["owner"]
+        kind = info["kind"]
+
+        if owner not in visits:
+            result[pet] = ("Stays", f"since {owner} is not traveling")
+            continue
+
+        house = household_of(visits[owner], households)
+
+        if kind in house_rules(house, households, people):
+            result[pet] = (
+                "Boarded",
+                f"since {owner} is visiting {house}, who cannot have {kind}s")
+
+        elif households[house]["accepts_pets"]:
+            result[pet] = (
+                "Comes",
+                f"since {owner} is visiting {house}, who welcomes {kind}s")
+
+        else:
+            result[pet] = (
+                "Boarded",
+                f"since {owner} is visiting {house}, who does not take {kind}s")
+                
+    return result
+```
+Example: 
+    Mom visiting Aunt Sue
+    
+```python
+  visits = {"Mom": "Sue"}
+
+for pet, (boards, why) in boarding(
+    pets, visits, households, people
+    ).items():
+    print(pet, boards, why)
+
+# Result: 
+Parker Comes since Mom is visiting Jay_and_Sue, who welcomes dogs
+Mouse Boarded since Mom is visiting Jay_and_Sue, who cannot have cats
+Corgy Stays since Steven is not traveling
+Wilson Stays since Jay is not traveling
+Collie Stays since Shannon is not traveling
 ```
 
 ## Thanks for reading!

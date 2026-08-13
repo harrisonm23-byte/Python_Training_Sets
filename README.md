@@ -267,9 +267,9 @@ Collie Stays since Shannon is not traveling
 
 ## Exercise 4: ID Code Generator
 
-In this exercise, I practiced nested dictionaries, indexing, loops, string manipulation, arithmetic, and functions. 
+This exercise creates a system for generating  ID numbers. 
 
-This exercise creates a system for generating and tracking ID numbers. Each policyholder is represented by a numbered key in a dictionary containing the card holder's current ID, prior IDs, and the characters changed in the most recent generation.
+Each policyholder is represented by a numbered key in a dictionary containing the card holder's current ID, prior IDs, and characters changed in the most recent generation.
 
 Each ID contains 9 characters: 4 letters and 5 digits. When a new ID is generated, 2 characters are replaced according to a set of indexing and arithmetic rules. 
 

@@ -170,13 +170,13 @@ Note: Admittedly, the logic in this exercise is largely fictitious – no one ev
 
 ```python
 people = {
-    "Mom":     {"avoids": []},
-    "Jay":     {"avoids": []},
-    "Sue":     {"avoids": ["cat"]},
-    "Steven":  {"avoids": []},
-    "Kyle":    {"avoids": []},
-    "Shannon": {"avoids": []},
-    "Arnold":  {"avoids": ["dog"]},
+    "Mom":     {"rules": []},
+    "Jay":     {"rules": []},
+    "Sue":     {"rules": ["cat"]},
+    "Steven":  {"rules": []},
+    "Kyle":    {"rules": []},
+    "Shannon": {"rules": []},
+    "Arnold":  {"rules": ["dog"]},
 }
 
 households = {
@@ -209,7 +209,7 @@ def house_rules(house, households, people):
     avoided = []
 
     for resident in households[house]["residents"]:
-        avoided.extend(people[resident]["avoids"])
+        avoided.extend(people[resident]["rules"])
 
     return avoided
 

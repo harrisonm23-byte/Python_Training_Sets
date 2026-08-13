@@ -279,8 +279,6 @@ I often practiced Python during a visit to New York for a maternal family event.
 
 This exercise determines whose pet can tag along, and whose have to be boarded. The exercise practices Boolean logic, dictionaries, nested data structures, and loops.
 
-Note: The logic in this exercise is mostly fictitious – no one ever brings their cat. 
-
 ```python
 people = {
     "Mom":     {"rules": []},

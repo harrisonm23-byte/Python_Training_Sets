@@ -1,5 +1,5 @@
 # Python_Training_Sets
-Personally developed and created Python practice exercises covering functions, data structures, loops, indexing, etc.
+Personally developed Python practice exercises.
 
 ## Intro / Disclaimer
 I developed these exercises as part of my Python practice process, built around datasets, rules and functions I designed independently. For my own pedagogical process, I used AI assistants as tutors and code reviewers. I'd write the code myself, share my attempted solutions and terminal output, and receive AI-instructed feedback on errors, syntax, and alternative approaches. I'd then repeatedly re-write and re-run the exercises in my terminal in order to practice the underlying concepts, build procedural muscle memory, and develop Python fluency.

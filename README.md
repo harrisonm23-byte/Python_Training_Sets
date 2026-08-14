@@ -273,7 +273,7 @@ Updated Member Data:
 ```
 ## ____________________________________________________
 
-## Exercise 4: Family Vacation & Pet Boarding 
+## Exercise 4: Pet Boarding Coordinator
 
 I often practiced Python during a visit to New York for a maternal family event. A common topic at such gatherings concerns the boarding of everyone's pets, since some relatives accept pets and other don't. 
 

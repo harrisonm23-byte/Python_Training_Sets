@@ -268,9 +268,9 @@ Updated Member Data:
 ```
 ## ____________________________________________________
 
-## Exercise 4: Pet Coordinator
+## Exercise 4: Family pets
 
-I often practiced Python during a visit to New York for a family event. A common topic at family gatherings concerns the boarding of everyone's pets, since only some relatives accept pets. 
+I practiced Python during a visit to New York for a family event. A common topic at family gatherings concerns the boarding of everyone's pets, since only some relatives accept pets. 
 
 This exercise determines whose pet can tag along, and whose have to be boarded. 
 

@@ -4,6 +4,7 @@ Personally developed Python practice exercises.
 ## Intro / Disclaimer
 I developed these exercises as part of my Python practice process. I designed these exercises independently. I used AI as a tutors and code reviewers. I'd write the code myself, share my attempted solutions, and receive feedback on errors, syntax, and alternatives. I then practiced the exercises in my terminal in order to build procedural memory and develop fluency.
 
+
 ## Exercise 1: City Abbreviations
     cities["abbrev"]
 
@@ -45,14 +46,15 @@ print(cities)
 'West Coast': ['Los Angeles', 'San Francisco', 'Palo Alto'], 
 'abbrev': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
 ```
-Note: This version only uses the first two words of a city name with multiple words. For example, New York City becomes --> 'NY', not 'NYC'. For that, we would use .split().
+Note: This version uses the first two words of a city name with multiple words. For example, New York City becomes 'NY', not 'NYC'.
+
 
 ## Exercise 2: Sunrise and Sunset Calculator: 
     sun_times(day, anchors)
 
 Estimate sunrise and sunset timing for any date by calculating the date's position between two of four anchor points. 
 
-The function assumes the dates of the equinoxes and solstices are March 21, June 21, September 21, and December 21. 
+We'll assume the dates of the equinoxes and solstices are March 21, June 21, September 21, and December 21. 
 
 ```python
 from datetime import date
@@ -261,6 +263,7 @@ Updated Member Data:
 
 # The function changes ABCD12345 to STCD12345, replacing A with S and B with T.
 ```
+
 
 ## Exercise 4: Family pets
 

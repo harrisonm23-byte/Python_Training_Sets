@@ -162,11 +162,11 @@ print(sunset)
 
 ## Exercise 3: ID Code Generator
 
-This exercise creates a system for generating  ID numbers, each containing 4 letters and 5 digits. 
+A system for generating  ID numbers containing 4 letters and 5 digits. 
 
-Each policyholder is represented by a numbered key in a dictionary containing the card holder's current ID, prior IDs, and characters changed in the most recent generation.
+Each ID is represented by a numbered key in a dictionary containing the holder's current ID, prior IDs, and the characters changed in the most recent generation.
 
-When a new ID is generated, 2 characters are replaced according to a set of indexing and arithmetic rules. 
+When a new ID is generated, 2 characters are replaced according the following rules. 
 
 Rules:
 
@@ -183,8 +183,7 @@ Replacement logic:
 2. For the remaining positions:
 
    - If a number: Sum the digits of the product of the ID's numeric values, and add this number to the target digit.
-   - If a letter: Map the letter's position (A-Z) to a corresponding numerical value between 1-26.
-       - Add the product of the ID’s numeric values to the target letter, and re-assign to a new letter. If 
+   - If a letter: Map the letter's position (A-Z) to a corresponding numerical value between 1-26. Add the product of the ID’s numeric values to the target letter, and re-assign to a new letter.  
     
 ```python
 

@@ -2,7 +2,7 @@
 Personally developed Python practice exercises.
 
 ## Intro / Disclaimer
-I developed these exercises as part of my Python practice process. I designed these exercises independently. I used AI as a tutors and code reviewers. I'd write the code myself, share my attempted solutions, and receive feedback on errors, syntax, and alternatives. I then practiced the exercises in my terminal in order to build procedural memory and develop fluency.
+I developed these exercises as part of my Python practice process. I designed these exercises independently, and used AI assistants for tutoring and review. I'd try the code myself, share my attempt, and learn througu feedback. I'd then practice the exercises in my terminal to build procedural memory and develop fluency.
 
 
 ## Exercise 1: City Abbreviations

@@ -159,7 +159,7 @@ print(sunset)
 
 ## Exercise 3: ID Code Generator
 
-A system for generating  ID numbers containing 4 letters and 5 digits. Each ID is represented by a numbered key in a dictionary containing the holder's current ID, prior IDs, and the characters changed in the most recent generation.
+A system for generating  ID numbers containing 4 letters and 5 digits. Each ID is represented by a numbered key in a dictionary containing the current ID, prior IDs, and the characters changed in the most recent generation.
 
 When a new ID is generated, 2 characters are replaced according the following rules. 
 

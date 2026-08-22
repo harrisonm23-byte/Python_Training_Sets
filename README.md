@@ -4,8 +4,6 @@ Personally developed Python practice exercises.
 ## Intro / Disclaimer
 I developed these exercises as part of my Python practice process. I designed these exercises independently. I used AI as a tutors and code reviewers. I'd write the code myself, share my attempted solutions, and receive feedback on errors, syntax, and alternatives. I then practiced the exercises in my terminal in order to build procedural memory and develop fluency.
 
-## _______________________________
-
 ## Exercise 1: City Abbreviations
     cities["abbrev"]
 
@@ -48,7 +46,6 @@ print(cities)
 'abbrev': ['NY', 'BOS', 'WD', 'LA', 'SF', 'PA']}
 ```
 Note: This version only uses the first two words of a city name with multiple words. For example, New York City becomes --> 'NY', not 'NYC'. For that, we would use .split().
-## __________________________________________
 
 ## Exercise 2: Sunrise and Sunset Calculator: 
     sun_times(day, anchors)
@@ -158,8 +155,6 @@ print(sunrise)
 print(sunset)
 ```
 
-## ____________________________________________________
-
 ## Exercise 3: ID Code Generator
 
 A system for generating  ID numbers containing 4 letters and 5 digits. Each ID is represented by a numbered key in a dictionary containing the holder's current ID, prior IDs, and the characters changed in the most recent generation.
@@ -266,7 +261,6 @@ Updated Member Data:
 
 # The function changes ABCD12345 to STCD12345, replacing A with S and B with T.
 ```
-## ____________________________________________________
 
 ## Exercise 4: Family pets
 
@@ -372,6 +366,7 @@ Collie Stays since Shannon is not traveling
 ---
 
 ## Briefly, the Ratio Method. 
+
 
 ```python
 def ratio_method(incident_count, population, total_damages, gdp_per_capita,

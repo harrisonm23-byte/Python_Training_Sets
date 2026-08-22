@@ -374,4 +374,14 @@ Wilson Stays since Jay is not traveling
 Collie Stays since Shannon is not traveling
 ```
 
+
+---
+
+Briefly, the Ratio Method. 
+
+def ratio_method(incident_count, population, total_damages, gdp_per_capita,
+                 sv1, sv2, th, lc1, lc2):
+
+
+
 ## Thanks for reading!

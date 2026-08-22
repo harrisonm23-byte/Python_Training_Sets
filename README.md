@@ -9,11 +9,9 @@ I developed these exercises as part of my Python practice process. I designed th
 ## Exercise 1: City Abbreviations
     cities["abbrev"]
 
-Based on a dictionary of East Coast and West Coast cities, I abbreviate or 'acronymize' the cities' names based on whether they contain one word or two words. I start with a dictionary of cities across the west coast and east coast, and then create a function that updates a new key, cities["abbrev"], with an acronym or abbreviation for each city.
+Based on a dictionary of East Coast and West Coast cities, I abbreviate each city's name, depending on whether they contain one word or two. Starting with a dictionary of cities, create a function that updates cities["abbrev"] with esch city's acronym or abbreviation.
 
-For cities containing a space, the function returns an acronym using the first letter of each word. For single-word cities, it instead uses the first three letters and converts them to uppercase. 
-
-The exercise practices nested iteration, dictionary access, conditionals, string indexing and slicing, `.upper()`, and `.append()`.
+If a city name contains a space, returns an acronym of the first letter of each word. For single-word cities, use the first three letters and convert them to uppercase. 
 
 ```python
 cities = {

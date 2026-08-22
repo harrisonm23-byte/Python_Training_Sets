@@ -275,9 +275,9 @@ Updated Member Data:
 
 ## Exercise 4: Pet Coordinator
 
-I often practiced Python during a visit to New York for a maternal family event. A common topic at such gatherings concerns the boarding of everyone's pets, since some relatives accept pets and other don't. 
+I often practiced Python during a visit to New York for a family event. A common topic at family gatherings concerns the boarding of everyone's pets, since only some relatives accept pets. 
 
-This exercise determines whose pet can tag along, and whose have to be boarded. The exercise practices Boolean logic, dictionaries, nested data structures, and loops.
+This exercise determines whose pet can tag along, and whose have to be boarded. 
 
 ```python
 people = {

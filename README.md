@@ -402,11 +402,9 @@ def ratio_method(incident_count, population, total_damages, gdp_per_capita,
         "SV2": str(sv2),
 
         # Type of Harm (TH): a classification across the six dimensions in
-        # TYPE_OF_HARM above (type of injury, defendant's role, physical
+        # TYPE_OF_HARM below (type of injury, defendant's role, physical
         # agent, onset, location, reason). Every axis is categorical — none
-        # is quantitative, so TH can't enter a ratio without an explicit
-        # coding decision (e.g. ordering reason_for_injury as
-        # Pure Accident < Negligence < Recklessness < Malice).
+        # is quantitative. 
         "Type_Harm": str(th),
 
         # Litigation Costs 1 (LC1): the cost structure of bringing a claim —
@@ -419,7 +417,9 @@ def ratio_method(incident_count, population, total_damages, gdp_per_capita,
         # LC2 can be a string (e.g., "low", "moderate", "high") or an integer (e.g., 1-10), depending on how we define it.
     }
 
-# Type of Harm (TH): the article's "mechanisms of action" classification. Each harm is characterized across SIX dimensions,each with its own set of values. Per footnote 55 the lists are not exhaustive. A real harm is one value drawn from each axis.
+# Type of Harm (TH): the article's "mechanisms of action" classification. 
+#Each harm is characterized across SIX dimensions, each with its own set of values. 
+# A real harm is one value drawn from each axis.
 TYPE_OF_HARM = {
     "type_of_injury":     ["Physical/Medical", "Financial", "Environmental", "Rights Violation"],
     "defendants_role":    ["Direct Action", "Product Developer", "Failure of Oversight", "Vicarious/Passive"],

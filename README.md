@@ -2,7 +2,7 @@
 Personally developed Python practice exercises.
 
 ## Intro / Disclaimer
-I developed these exercises as part of my Python practice process, built around datasets, rules and functions I designed independently. For my own pedagogical process, I used AI assistants as tutors and code reviewers. I'd write the code myself, share my attempted solutions and terminal output, and receive AI-instructed feedback on errors, syntax, and alternative approaches. I'd then repeatedly re-write and re-run the exercises in my terminal in order to practice the underlying concepts, build procedural muscle memory, and develop Python fluency.
+I developed these exercises as part of my Python practice process. I designed these exercises independently. I used AI as a tutors and code reviewers. I'd write the code myself, share my attempted solutions, and receive feedback on errors, syntax, and alternatives. I then practiced the exercises in my terminal in order to build procedural memory and develop fluency.
 
 ## _______________________________
 

@@ -53,9 +53,9 @@ Note: This version only uses the first two words of a city name with multiple wo
 ## Exercise 2: Sunrise and Sunset Calculator: 
     sun_times(day, anchors)
 
-The following function estimates sunrise and sunset timing for any date in the calendar year. For a given date, it approximates the time of sunrise and sunset by calculating the date's relative position between two of four anchor points, which individualy represent an equinox or solstice (i.e., "anchor dates"). 
+Estimate sunrise and sunset timing for any date by calculating the date's position between two of four anchor points. 
 
-The function further approximates the equinoxes and solstices as March 21, June 21, September 21, and December 21, ignoring annual variations in seasonal timing. 
+The function assumes the dates of the equinoxes and solstices are March 21, June 21, September 21, and December 21. 
 
 ```python
 from datetime import date

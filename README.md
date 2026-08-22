@@ -118,7 +118,7 @@ def sun_times(day, anchors):
     last_sunrise, last_sunset = anchors[last_anchor]
     next_sunrise, next_sunset = anchors[next_anchor]
 ```
-Apply a linear factor of ~1/90 to the date index, and multiply it by the difference between the next and last anchor date sunrise/sunset.
+Apply a factor of 1/90 to the date index, and multiply by the difference between next and last anchor sunrise/sunset.
 
 ```python    
     sunrise = (

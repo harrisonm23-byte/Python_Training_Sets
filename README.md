@@ -162,9 +162,7 @@ print(sunset)
 
 ## Exercise 3: ID Code Generator
 
-A system for generating  ID numbers containing 4 letters and 5 digits. 
-
-Each ID is represented by a numbered key in a dictionary containing the holder's current ID, prior IDs, and the characters changed in the most recent generation.
+A system for generating  ID numbers containing 4 letters and 5 digits. Each ID is represented by a numbered key in a dictionary containing the holder's current ID, prior IDs, and the characters changed in the most recent generation.
 
 When a new ID is generated, 2 characters are replaced according the following rules. 
 
@@ -180,7 +178,7 @@ Replacement logic:
 
 1. If a number or letter was replaced in the previous ID generation, preserve that character.
     
-2. For the remaining positions:
+2. For remaining positions:
 
    - If a number: Sum the digits of the product of the ID's numeric values, and add this number to the target digit.
    - If a letter: Map the letter's position (A-Z) to a corresponding numerical value between 1-26. Add the product of the ID’s numeric values to the target letter, and re-assign to a new letter.  
@@ -282,7 +280,6 @@ people = {
     "Jay":     {"rules": []},
     "Sue":     {"rules": ["cat"]},
     "Steven":  {"rules": []},
-    "Kyle":    {"rules": []},
     "Shannon": {"rules": []},
     "Arnold":  {"rules": ["dog"]},
 }
@@ -291,7 +288,7 @@ households = {
     "Mom":          {"residents": ["Mom"],             "accepts_pets": True},
     "Jay_and_Sue":  {"residents": ["Jay", "Sue"],      "accepts_pets": True},
     "Steven":       {"residents": ["Steven"],          "accepts_pets": True},
-    "Kyle_Shannon": {"residents": ["Kyle", "Shannon"], "accepts_pets": False},
+    "Shannon":      {"residents": ["Shannon"], "accepts_pets": False},
     "Arnold":       {"residents": ["Arnold"],          "accepts_pets": True},
 }
 
